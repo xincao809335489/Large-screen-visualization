@@ -1,0 +1,69 @@
+//flex
+.flex-jc(@items, @content, @pack) {
+  display: flex;
+  -webkit-box-pack: @pack;
+  -ms-flex-pack: @pack;
+  justify-content: @content;
+  align-items: @items;
+}
+.h-1{
+  height:100%;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex(@num: 1) {
+  flex: @num;
+  height: 100%;
+}
+
+.px-2 {
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+}
+
+//浮动
+.float-rl(@direction) {
+  float: @direction;
+}
+
+// 字体加粗
+.fw-b {
+  font-weight: bold;
+}
+
+//文章一行显示，多余省略号显示
+.title-item {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bg-color-blue {
+  background-color: #1a5cd7;
+}
+
+.ml-3 {
+  margin-left: 0.2rem;
+}
+
+.ml-4 {
+  margin-left: 0.3rem;
+}
+
+.mr-3 {
+  margin-right: 0.2rem;
+}
+
+.mr-4 {
+  margin-right: 0.3rem;
+}

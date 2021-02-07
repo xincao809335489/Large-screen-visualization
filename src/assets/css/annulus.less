@@ -1,0 +1,179 @@
+.annulus {
+  width: 320px;
+  height: 320px;
+  position: relative;
+  background: url(../images/annulus/di.png) no-repeat center 131px;
+  margin-left: 78px;
+  float: left;
+  margin-right: 14px;
+}
+
+.annulus-charts {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 11px;
+  top: -17px;
+}
+
+.annulus-bg1 {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  left: 21px;
+  top: 45px;
+}
+
+.annulus-bg1 img {
+  transform-origin: center;
+  transform-style: preserve-3d;
+  position: absolute;
+  left:0;
+}
+
+.annulus-bg1 img.q2 {
+  transform: rotateX(248deg) rotateY(180deg) rotate(0deg);
+}
+
+.annulus-bg1 img.q1 {
+  animation: rotatePie 3s linear infinite;
+}
+
+@keyframes rotatePie {
+  0% {
+      transform: rotateX(248deg) rotateY(180deg) rotate(0deg)
+  }
+
+  to {
+      transform: rotateX(248deg) rotateY(180deg) rotate(1turn)
+  }
+}
+
+.annulus-bg2 {
+  position: absolute;
+  width: 280px;
+  height: 109px;
+  left: 21px;
+  top: 90px;
+  background: url(../images/annulus/top.png) no-repeat;
+}
+
+.annulus-bg3 {
+  position: absolute;
+  width: 287px;
+  height: 212px;
+  left: 17px;
+  top: 58px;
+  background: url(../images/annulus/c1.png) no-repeat;
+}
+
+.annulus-bg4 {
+  position: absolute;
+  width: 287px;
+  height: 212px;
+  left: 17px;
+  top: 58px;
+  background: url(../images/annulus/c2.png) no-repeat;
+}
+
+.annulus-num {
+  position: absolute;
+  width: 287px;
+  height: 113px;
+  left: 17px;
+  top: 65px;
+  font-size: 36px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.light {
+  position: absolute;
+  width: 4px;
+  height: 27px;
+  animation: tail 1.5s ease-in-out infinite;
+  opacity: 0;
+}
+
+.light-yellow {
+  background: url(../images/annulus/y.png) no-repeat;
+  top: 206px;
+  left: 229px;
+  z-index: 5;
+}
+
+.light-orange {
+  background: url(../images/annulus/o.png) no-repeat;
+  top: 165px;
+  left: 15px;
+  animation-delay: 2s;
+}
+
+.light-blue {
+  background: url(../images/annulus/b.png) no-repeat;
+  top: 82px;
+  left: 279px;
+  animation-delay: 2s;
+}
+
+.light-green {
+  background: url(../images/annulus/g.png) no-repeat;
+  top: 51px;
+  left: 105px;
+}
+
+@keyframes tail {
+  0% {
+      height: 0;
+      opacity: 0;
+      transform: translateY(10px);
+  }
+
+  50% {
+      height: 100px;
+      opacity: 1;
+  }
+
+  100% {
+      height: 0;
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+}
+
+.annulus-text {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+  position: absolute;
+  bottom: 37px;
+  width: 100%;
+}
+
+.annulus-bg5 {
+  position: absolute;
+  left: 63px;
+  bottom: 163px;
+  width: 197px;
+  height: 131px;
+  background: url(../images/annulus/pl.png) no-repeat center bottom;
+  animation: tail2 2s ease-in-out infinite;
+}
+
+@keyframes tail2 {
+  0% {
+      opacity: 0;
+  }
+
+  50% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
