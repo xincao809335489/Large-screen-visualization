@@ -76,17 +76,17 @@
                     v-for="(item, index) in waterData"
                     :key="index"
                     :waterData="item"
-                    width="130px"
-                    height="70%"
+                    width="120px"
+                    height="64%"
                   ></v-centerLeft2>
                 </div>
               </dv-border-box-12>
             </div>
           </div>
-          <div class="flex-ddd">
+          <div class="flex-dd">
             <div class="h-1">
               <dv-border-box-12>
-                <v-centerSwiper></v-centerSwiper>
+                <v-centerSwiper :swiperData="swiperData"></v-centerSwiper>
               </dv-border-box-12>
             </div>
           </div>
@@ -152,6 +152,67 @@ export default {
           text: '卖家数',
           value: 0.5
         }
+      ],
+      swiperData: [
+        {
+          title: '水质',
+          lists: [
+            {
+              name: '水质目标',
+              value: '饮用水'
+            },
+            {
+              name: '水质类别',
+              value: '50000'
+            },
+            {
+              name: '主要污染物',
+              value: '50000'
+            }
+          ]
+        },
+        {
+          title: '水源',
+          lists: [
+            {
+              name: '水源地类型',
+              value: '饮用水'
+            },
+            {
+              name: '取水量(万吨)',
+              value: '50000'
+            },
+            {
+              name: '水质类别',
+              value: '50000'
+            },
+            {
+              name: '水源地级别',
+              value: '50000'
+            }
+          ]
+        },
+        {
+          title: '断面名称三',
+          lists: [
+            {
+              name: '水源地类型',
+              value: '饮用水'
+            },
+            {
+              name: '取水量(万吨)',
+              value: '50000'
+            },
+            {
+              name: '水质类别',
+              value: '50000'
+            },
+            {
+              name: '水源地级别',
+              value: '50000'
+            }
+          ]
+        }
       ]
     }
   },
@@ -173,7 +234,7 @@ export default {
   width: 100%;
   height: 100vh;
   .bg {
-    padding: 0.2rem 0.2rem 0 0.2rem;
+    padding: 0.8rem 0.2rem 0 0.2rem;
     background-image: url("../assets/images/all_bg.png");
     background-size: cover;
     background-position: center center;
@@ -186,6 +247,7 @@ export default {
       }
       .jc-between {
         .flex-jc(center,space-between,justify);
+        margin: 0.3rem 0;
       }
       .flex-d {
         .flex(1);
@@ -292,7 +354,7 @@ export default {
       }
       .figure {
         margin-top: 0.25rem;
-        height: 180px;
+        height: 240px;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -309,7 +371,7 @@ export default {
         margin-top: 0.25rem;
         padding: 10px 12px;
         position: relative;
-        height: 420px;
+        height: 470px;
       }
     }
   }

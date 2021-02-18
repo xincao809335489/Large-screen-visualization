@@ -3,14 +3,14 @@
     <template v-if="!item.children">
       <el-menu-item :index="item.path">
         <i class="iconfont" :class="item.meta.icon"></i>
-        <span>{{ item.title }}</span>
+        <span>{{ item.name }}</span>
       </el-menu-item>
     </template>
 
     <el-submenu v-else :index="item.path">
       <template slot="title">
         <i class="iconfont" :class="item.meta.icon"></i>
-        <span>{{ item.title }}</span>
+        <span>{{ item.name }}</span>
       </template>
 
       <template v-for="child in item.children">
@@ -21,7 +21,7 @@
         />
         <el-menu-item v-else :key="child.path" :index="child.path">
           <i class="iconfont" :class="child.meta.icon"></i>
-          <span>{{ child.title }}</span>
+          <span>{{ child.name }}</span>
         </el-menu-item>
       </template>
     </el-submenu>

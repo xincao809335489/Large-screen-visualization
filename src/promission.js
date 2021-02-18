@@ -8,32 +8,33 @@ const loadView = (viewPath) => {
   return () => import(`@/views/${viewPath}.vue`)
 }
 export const getAsyncRoutes = arr => {
-  // const newArr = []
   arr.forEach(item => {
-    if (item.component) {
-      item.component = loadView(item.component)
-    }
     if (item.children) {
-      // getAsyncRoutes(item.children)
-      item.redirect = item.children[0].path
-      getAsyncRoutes(item.children)
-      // newArr = newArr.concat(result)
+      item.children.forEach(child => {
+        child.component = loadView(child.component)
+      })
+      router.options.routes[3].children = [...item.children]
+    } else {
+      item.component = loadView(item.component)
+      if (item.id === 0) {
+        router.options.routes[1].children.push(item)
+      } else if (item.id === 1) {
+        router.options.routes[2].children.push(item)
+      } else if (item.id === 3) {
+        router.options.routes[4].children.push(item)
+      }
     }
   })
-  return arr
 }
 
 export const setAsyncRoutes = menu => {
-  const _menu = getAsyncRoutes(menu)
-  const allMenus = _menu.filter((item, index) => index !== _menu.length - 1)
-  const lastMenu = _menu[_menu.length - 1]
-  router.options.routes[1].children = [...allMenus]
+  getAsyncRoutes(menu)
   const errorRoute = {
     path: '*',
     name: '404',
     component: loadView('NotFound')
   }
-  router.options.routes.push(lastMenu, errorRoute)
+  router.options.routes.push(errorRoute)
   router.$addRoutes(router.options.routes)
   console.log(router.options.routes)
 }

@@ -36,11 +36,9 @@ export default {
         tooltip: {
           trigger: 'axis',
           formatter: '{b}<br/>{a0}: {c0}<br/>{a1}: {c1}<br/>{a2}: {c2}',
-          axisPointer: { // 鼠标移到柱子上的样式设置
-            type: 'shadow',
-            label: {
-              backgroundColor: '#6a7985'
-            }
+          axisPointer: {
+            type: 'none'
+
           },
           textStyle: {
             color: '#fff',
@@ -61,7 +59,8 @@ export default {
           {
             type: 'category',
             data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
-            axisLabel: { // x轴文字的颜色
+            axisLabel: {
+              // x轴文字的颜色
               color: '#fff'
             },
             axisLine: {
@@ -98,7 +97,7 @@ export default {
               }
             },
             axisTick: {
-              show: false // y轴刻度线是否显示
+              show: true // y轴刻度线是否显示
             },
             axisLabel: {
               color: '#fff'
@@ -112,7 +111,7 @@ export default {
         dataZoom: {
           xAxisIndex: [0],
           start: 10,
-          end: 80// 初始化滚动条
+          end: 80 // 初始化滚动条
         },
         series: [
           {

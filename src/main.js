@@ -43,10 +43,13 @@ export const crumbList = data => {
       case '/user':
         item.name = '用户列表'
         break
-      case '/proList':
+      case '/product':
+        item.name = '产品管理'
+        break
+      case '/product/proList':
         item.name = '产品列表'
         break
-      case '/proCategories':
+      case '/product/proCategories':
         item.name = '产品分类'
         break
       default:
@@ -67,6 +70,7 @@ export const crumbList = data => {
 }
 router.afterEach((to, from, next) => {
   var routerList = to.matched
+  console.log(routerList)
   var crumbData = crumbList(routerList)
   store.commit('setCrumbList', crumbData)
 })

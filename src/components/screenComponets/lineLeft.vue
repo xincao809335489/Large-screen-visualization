@@ -54,7 +54,7 @@ export default {
         backgroundColor: '#020C16',
         grid: {
           left: '9%',
-          top: '12%',
+          top: '8%',
           bottom: '10%',
           right: '0%'
         },
@@ -168,9 +168,8 @@ export default {
 .line-box {
   height: 98%;
   width: 97%;
-  padding-left:7px;
-  padding-top:7px;
-  padding-bottom:10px;
+  padding-left:12px;
+  padding-top:5px;
   box-sizing: border-box;
 }
 </style>

@@ -17,7 +17,10 @@ VueRouter.prototype.push = function push (location) {
 }
 
 Vue.use(VueRouter)
-
+const loadView = (viewPath) => {
+  // 用字符串模板实现动态 import 从而实现路由懒加载
+  return () => import(`@/views/${viewPath}.vue`)
+}
 /**
  * 静态路由
  */
@@ -30,6 +33,29 @@ export const constantRouterMap = [{
   component: Layout,
   name: '首页',
   redirect: '/home',
+  children: []
+},
+{
+  path: '/list',
+  component: Layout,
+  name: '用户列表',
+  redirect: '/user',
+  children: []
+},
+{
+  path: '/product',
+  component: Layout,
+  name: '产品管理',
+  meta: {
+    icon: 'icon-huoche_delivergoods_bg'
+  },
+  children: []
+},
+{
+  path: '/bigScreen',
+  component: Layout,
+  name: '大屏可视化',
+  redirect: '/echarts',
   children: []
 }
 ]
@@ -57,7 +83,7 @@ router.beforeEach((to, from, next) => {
       next('/login')
     }
   }
-  routerLoading ? gloLoading.loadingHide() : ''// 关闭loading层
+  routerLoading ? gloLoading.loadingHide() : '' // 关闭loading层
 })
 router.$addRoutes = (params) => {
   router.matcher = new VueRouter({
