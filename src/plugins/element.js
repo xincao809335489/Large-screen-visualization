@@ -30,7 +30,9 @@ import {
   Dialog,
   Option,
   DatePicker,
-  Image
+  Image,
+  Checkbox,
+  CheckboxGroup
 } from 'element-ui'
 
 Vue.use(Form)
@@ -62,6 +64,8 @@ Vue.use(Select)
 Vue.use(Option)
 Vue.use(DatePicker)
 Vue.use(Image)
+Vue.use(Checkbox)
+Vue.use(CheckboxGroup)
 // 将弹框组件全局挂在到VUe原形实例
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm

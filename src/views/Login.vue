@@ -92,6 +92,7 @@ export default {
           this.$store.commit('setMenus', res.list.data.lists)
           this.$store.commit('setUsername', res.list.data.username)
           this.$store.commit('setToken', res.list.data.token)
+          this.$store.commit('setPermission', res.list.data.persmissions)
           this.$router.replace('/')
         })
       })

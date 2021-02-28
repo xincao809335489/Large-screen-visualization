@@ -36,5 +36,4 @@ export const setAsyncRoutes = menu => {
   }
   router.options.routes.push(errorRoute)
   router.$addRoutes(router.options.routes)
-  console.log(router.options.routes)
 }

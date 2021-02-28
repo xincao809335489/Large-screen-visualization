@@ -77,3 +77,27 @@ export function categories () {
     method: 'get'
   })
 }
+// 获取产品管理列表数据
+export function products () {
+  return request({
+    url: '/product',
+    method: 'get'
+  })
+}
+
+// 新增产品管理列表数据
+export function addShop (obj) {
+  return request({
+    url: '/addShop',
+    method: 'post',
+    data: obj
+  })
+}
+// 删除对应tag的数据
+export function deleteShopTag (obj) {
+  return request({
+    url: '/deleteTag',
+    method: 'post',
+    data: obj
+  })
+}

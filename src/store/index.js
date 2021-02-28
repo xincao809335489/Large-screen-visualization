@@ -9,7 +9,8 @@ export default new Vuex.Store({
     username: sessionStorage.getItem('username') || '',
     addRoutes: [], // 动态匹配的路由
     isCollapse: false, // 折叠菜单变量
-    crumbList: [] // 顶部导航菜单
+    crumbList: [], // 顶部导航菜单
+    permissions: [] // 后台返回的按钮权限数组
   },
   mutations: {
     setMenus (state, data) {
@@ -34,6 +35,9 @@ export default new Vuex.Store({
     },
     deleteRouter (state, id) {
       state.crumbList.splice(id, 1)
+    },
+    setPermission (state, data) {
+      state.permissions = data
     }
   },
   actions: {

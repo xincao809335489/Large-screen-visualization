@@ -12,9 +12,13 @@ import './promission.js'
 import echarts from 'echarts'
 // 引入dataV
 import dataV from '@jiaminghi/data-view'
+// 注册按钮权限组件
+import KtButton from '@/components/ktButton.vue'
 // 引入swiper轮播图
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/swiper-bundle.css'
+// 注册全局便于后期使用
+Vue.component('KtButton', KtButton)
 Vue.use(VueAwesomeSwiper /* { default options with global component } */)
 // 将自动注册所有组件为全局组件
 Vue.prototype.$echarts = echarts
@@ -70,7 +74,6 @@ export const crumbList = data => {
 }
 router.afterEach((to, from, next) => {
   var routerList = to.matched
-  console.log(routerList)
   var crumbData = crumbList(routerList)
   store.commit('setCrumbList', crumbData)
 })

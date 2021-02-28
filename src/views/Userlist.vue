@@ -58,22 +58,30 @@
           <el-button size="mini" @click="handleAdd(scope)">新增</el-button>
         </template>
         <template slot-scope="scope" align="left">
-          <el-button size="mini" @click="handleEdit(scope.$index, scope.row)"
-            >编辑</el-button
-          >
-          <el-button
+          <kt-button
+            size="mini"
+            @click="handleEdit(scope.$index, scope.row)"
+            label="编辑"
+            perms="editor"
+          ></kt-button>
+          <kt-button
             size="mini"
             type="danger"
-            @click="handleDelete(scope.$index, scope.row)"
-            >删除</el-button
-          >
+            @click="handleEdit(scope.$index, scope.row)"
+            label="删除"
+            perms="delete"
+          ></kt-button>
         </template>
       </el-table-column>
     </el-table>
     <div class="pagination">
-      <el-button size="medium" type="primary" @click="handleAllDelete"
-        >批量删除</el-button
-      >
+      <kt-button
+        size="medium"
+        type="primary"
+        @click="handleAllDelete"
+        label="批量删除"
+        perms="delete"
+      ></kt-button>
       <el-pagination
         @current-change="changeCurrent"
         background
@@ -162,7 +170,13 @@
 </template>
 
 <script type="text/javascript">
-import { userLists, deleteAll, editInfo, deleteInfo, addInfo } from '../api/http'
+import {
+  userLists,
+  deleteAll,
+  editInfo,
+  deleteInfo,
+  addInfo
+} from '../api/http'
 export default {
   data () {
     return {
