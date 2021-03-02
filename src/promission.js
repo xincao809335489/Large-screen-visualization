@@ -14,6 +14,7 @@ export const getAsyncRoutes = arr => {
         child.component = loadView(child.component)
       })
       router.options.routes[3].children = [...item.children]
+      router.options.routes[3].redirect = item.children[0].path
     } else {
       item.component = loadView(item.component)
       if (item.id === 0) {
@@ -36,4 +37,5 @@ export const setAsyncRoutes = menu => {
   }
   router.options.routes.push(errorRoute)
   router.$addRoutes(router.options.routes)
+  console.log(router.options.routes)
 }

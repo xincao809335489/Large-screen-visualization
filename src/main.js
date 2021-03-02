@@ -8,6 +8,7 @@ import './plugins/element.js'
 import '../src/assets/css/index.less'
 // 引入动态设置的路由router
 import './promission.js'
+import drag from './utils/drag/drag'
 // 引入echarts
 import echarts from 'echarts'
 // 引入dataV
