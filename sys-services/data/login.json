@@ -1,0 +1,111 @@
+{
+  "admin": {
+    "data": {
+      "username": "admin",
+      "token": "Bearer-admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjUwMCwicmlkIjowLCJpYXQiOjE1MTI1NDQyOTksImV4cCI6MTUxMjYzMDY5OX0.eGrsrvwHm-tPsO9r_pxHIQ5i5L1kX9RX444uwnRGaIM",
+      "lists": [
+        {
+          "id": 0,
+          "name": "首页",
+          "path": "/home",
+          "component": "Home",
+          "meta": {
+            "icon": "icon-home-filling"
+          }
+        },
+        {
+          "id": 1,
+          "path": "/user",
+          "name": "用户列表",
+          "component": "Userlist",
+          "meta": {
+            "icon": "icon-yonghuguanli"
+          }
+        },
+        {
+          "id": 2,
+          "path": "/product",
+          "name": "产品管理",
+          "component": "Layout",
+          "meta": {
+            "icon": "icon-huoche_delivergoods_bg"
+          },
+          "children": [
+            {
+              "id": "2-1",
+              "path": "/product/proList",
+              "name": "产品列表",
+              "component": "Prolist",
+              "meta": {
+                "icon": "icon-yiliaohangyedeICON-"
+              }
+            },
+            {
+              "id": "2-2",
+              "path": "/product/proCategories",
+              "name": "产品分类",
+              "component": "Categories",
+              "meta": {
+                "icon": "icon-fenlei"
+              }
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "path": "/echarts",
+          "name": "大屏可视化",
+          "component": "Echartlist",
+          "meta": {
+            "icon": "icon-tongjifenxi"
+          }
+        }
+      ],
+      "persmissions": ["delete"]
+    },
+    "meta": {
+      "msg": "登录成功",
+      "status": 200
+    }
+  },
+  "editor": {
+    "data": {
+      "username": "editor",
+      "token": "Bearer-editor eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjUwMCwicmlkIjowLCJpYXQiOjE1MTI1NDQyOTksImV4cCI6MTUxMjYzMDY5OX0.eGrsrvwHm-tPsO9r_pxHIQ5i5L1kX9RX444uwnRGaIM",
+      "lists": [
+        {
+          "id": 0,
+          "name": "首页",
+          "path": "/home",
+          "component": "Home",
+          "meta": {
+            "icon": "icon-home-filling"
+          }
+        },
+        {
+          "id": 1,
+          "path": "/user",
+          "name": "用户列表",
+          "component": "Userlist",
+          "meta": {
+            "icon": "icon-yonghuguanli"
+          }
+        },
+        {
+          "id": 3,
+          "path": "/echarts",
+          "name": "智慧平台",
+          "component": "Echartlist",
+          "meta": {
+            "icon": "icon-tongjifenxi"
+          }
+        }
+      ],
+      "persmissions": ["delete", "editor", "add"]
+    },
+    "meta": {
+      "msg": "登录成功",
+      "status": 200
+    }
+  }
+}
