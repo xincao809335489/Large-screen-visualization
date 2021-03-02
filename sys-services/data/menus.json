@@ -1,0 +1,78 @@
+{
+    "data": [{
+            "path": "/",
+            "component": "Home",
+            "meta": {
+                "title": "首页",
+                "icon": "iconfont icon-home-filling"
+            },
+            "children": []
+        },
+        {
+            "path": "/user",
+            "component": "Layout",
+            "meta": {
+                "icon": "iconfont icon-yonghuguanli",
+                "title": "用户管理"
+            },
+            "children": [{
+                "path": "/userlist",
+                "component": "Userlist",
+                "meta": {
+                    "title": "用户列表"
+                },
+                "children": []
+            }]
+        },
+        {
+            "path": "/roles",
+            "component": "Layout",
+            "meta": {
+                "title": "权限管理",
+                "icon": "iconfont icon-quanxianguanli"
+            },
+            "children": [{
+                "path": "/roleslist",
+                "component": "Roleslist",
+                "meta": {
+                    "title": "权限列表"
+                },
+                "children": []
+            }]
+        },
+        {
+            "path": "/goods",
+            "component": "Layout",
+            "meta": {
+                "title": "商品管理",
+                "icon": "iconfont icon-huoche_delivergoods_bg"
+            },
+            "children": [{
+                    "path": "/goodsList",
+                    "component": "GoodsList",
+                    "meta": {
+                        "title": "商品列表"
+                    },
+                    "children": []
+                },
+                {
+                    "path": "/categories",
+                    "component": "Categories",
+                    "meta": {
+                        "title": "商品分类"
+                    },
+                    "children": []
+                }
+            ]
+        },
+        {
+            "path": "/report",
+            "component": "Reports",
+            "meta": {
+                "title": "数据统计",
+                "icon": "iconfont icon-tongjifenxi"
+            },
+            "children": []
+        }
+    ]
+}
