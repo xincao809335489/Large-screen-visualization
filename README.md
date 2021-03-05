@@ -1,6 +1,6 @@
 # vue-shop
 
-> A Vue.js project
+> 基于vue-cli3且包含 菜单 跟 按钮权限 的管理系统项目
 
 ## 启动服务
 
