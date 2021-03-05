@@ -5,7 +5,7 @@
 ## 启动服务
 
 ``` bash
-# 进入services文件夹运行
+# 进入sys-services文件夹运行
 supervisor sys-services.js
 ```
 
